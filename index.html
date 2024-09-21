@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Flip Cards</title>
+    </head>
+    <body class="bodyFixed">
+        <div class="loading">
+            <h1>Flash Cards</h1>
+        </div>
+
+        <div id="app">
+            <!-- <div class="marquee">
+                <div class="marqueeInner">
+                    <div class="text text1">
+                        Whether you're a beginner or an advanced learner, you can seamlessly switch
+                        between hiragana, katakana, and romanized text, enhancing your language
+                        learning experience.
+                    </div>
+                    <div class="text text2">
+                        初心者でも上級者でも、ひらがな、カタカナ、ローマ字テキストをシームレスに切り替えて、言語学習体験を向上させることができます。
+                    </div>
+                </div>
+            </div> -->
+            <header class="headerBar">
+                <div class="ctInner">
+                    <h1>Flash Cards</h1>
+                    <div class="dropdown">
+                        <span id="selectTypeDropdown" class="current">Select type</span>
+                        <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            height="24"
+                            viewBox="0 -960 960 960"
+                            width="24"
+                        >
+                            <path d="M480-345 240-585l56-56 184 184 184-184 56 56-240 240Z" />
+                        </svg>
+                        <div class="dropdownList">
+                            <div class="dropdownItem">
+                                <input type="radio" name="lang-type" id="hiToRo" hidden />
+                                <label for="hiToRo" data-select-type="hi"
+                                    >Hiragana to Romanji</label
+                                >
+                            </div>
+                            <div class="dropdownItem">
+                                <input type="radio" name="lang-type" id="kaToRo" hidden />
+                                <label for="kaToRo" data-select-type="ka"
+                                    >Katakana to Romanji</label
+                                >
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </header>
+
+            <main>
+                <div class="ctInner">
+                    <div class="filter">
+                        <div class="filterList">
+                            <!-- ...filter btns -->
+                        </div>
+                        <div class="selectGroup">
+                            <button id="filterBtn">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -1000 1000 1000">
+                                    <path
+                                        d="M440-160q-17 0-28.5-11.5T400-200v-240L168-736q-15-20-4.5-42t36.5-22h560q26 0 36.5 22t-4.5 42L560-440v240q0 17-11.5 28.5T520-160h-80Zm40-308 198-252H282l198 252Zm0 0Z"
+                                    />
+                                </svg>
+                            </button>
+
+                            <ul>
+                                <li>
+                                    <input type="checkbox" name="flipCheck" id="flipCheck" hidden />
+
+                                    <label for="flipCheck">
+                                        <span class="checkbox">
+                                            <svg
+                                                xmlns="http://www.w3.org/2000/svg"
+                                                viewBox="0 -960 960 960"
+                                            >
+                                                <path
+                                                    d="M382-240 154-468l57-57 171 171 367-367 57 57-424 424Z"
+                                                />
+                                            </svg>
+                                        </span>
+                                        Flip</label
+                                    >
+                                </li>
+                                <li>
+                                    <input
+                                        type="checkbox"
+                                        name="shuffle"
+                                        id="shuffleCheck"
+                                        hidden
+                                    />
+
+                                    <label for="shuffleCheck">
+                                        <span class="checkbox">
+                                            <svg
+                                                xmlns="http://www.w3.org/2000/svg"
+                                                viewBox="0 -960 960 960"
+                                            >
+                                                <path
+                                                    d="M382-240 154-468l57-57 171 171 367-367 57 57-424 424Z"
+                                                />
+                                            </svg>
+                                        </span>
+                                        Shuffle</label
+                                    >
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ctInner">
+                    <div class="container">
+                        <!-- ...cards -->
+                    </div>
+                </div>
+            </main>
+
+            <footer class="footerBar">
+                <span>
+                    Made with
+                    <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        height="24"
+                        viewBox="0 -960 960 960"
+                        width="24"
+                    >
+                        <path
+                            d="M480-147q-14 0-28.5-5T426-168l-69-63q-106-97-191.5-192.5T80-634q0-94 63-157t157-63q53 0 100 22.5t80 61.5q33-39 80-61.5T660-854q94 0 157 63t63 157q0 115-85 211T602-230l-68 62q-11 11-25.5 16t-28.5 5Z"
+                        />
+                    </svg>
+                    by <a href="https://github.com/MytMnSthU" target="_blank">Myat</a>
+                </span>
+            </footer>
+        </div>
+        <script type="module" src="./assets/js/main.js"></script>
+    </body>
+</html>
